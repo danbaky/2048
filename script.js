@@ -5,10 +5,20 @@ const gameBoard = document.getElementById("board");
 const grid = new Grid(gameBoard);
 grid.getRandomEmptyCell().linkTile(new Tile(gameBoard));
 grid.getRandomEmptyCell().linkTile(new Tile(gameBoard));
+
+const restartButtom = document.getElementById("restart");
+restartButtom.addEventListener('click', restartGame);
 setUpInput();
 
 function setUpInput() {
     window.addEventListener("keydown", handleInput, {once : true});
+}
+
+
+function restartGame() {
+    grid.deleteAllTiles(gameBoard);
+    grid.getRandomEmptyCell().linkTile(new Tile(gameBoard));
+    grid.getRandomEmptyCell().linkTile(new Tile(gameBoard));
 }
 
 async function handleInput(event) {

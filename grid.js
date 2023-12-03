@@ -25,7 +25,6 @@ export class Grid {
     getRandomEmptyCell(){
         const emty = this.cells.filter(a => a.isEmpty());
         const randomIndex = Math.floor(Math.random() * emty.length);
-        console.log(`создал клетку whith индекс ${randomIndex}`);
         return emty[randomIndex];
     }
 
@@ -45,5 +44,18 @@ export class Grid {
             return gruppedCells;
         }, [])
 
+    }
+
+    deleteAllTiles(gameBoard) {
+        this.cells.forEach(cell => 
+            {
+                if (!!cell.linkedTile){
+
+                    cell.linkedTile.removeFromDOM();
+                    cell.unlinkTile();
+                    
+                }
+            }
+        )
     }
 }

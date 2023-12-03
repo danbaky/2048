@@ -14,7 +14,7 @@ body {
 
 #board {
 
-    --cell-size: 20vmin;
+    --cell-size: 18vmin;
     --cell-gap: 2vmin;
 
     position: relative;
@@ -41,8 +41,8 @@ body {
     justify-content: center;
     align-items: center;
 
-    width: 20vmin;
-    height: 20vmin;
+    width: 18vmin;
+    height: 18vmin;
     border-radius: 1vmin;
 
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -61,4 +61,32 @@ body {
         opacity: 0.5;
         transform: scale(0);
     }
+}
+
+.buttom {
+    display: block;
+    justify-content: center;
+
+    text-align: center;
+
+    width: 18vmin;
+    height: 10vmin;
+    border-radius: 1vmin;
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 3.5vmin;
+    font-weight: bold;
+
+    color: white;
+    background-color: hsl(330, 60%, 46%);
+    cursor: pointer;
+    padding: 6px 0px 10px;
+}
+
+.topnav {
+    padding: 0px 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
 }
