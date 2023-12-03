@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color:#4B2E31;
+    background-color:#3b303a;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,11 +23,14 @@ body {
     grid-template-rows: repeat(4, var(--cell-size));
     gap: var(--cell-gap);
     border-radius: 1vmin;
+    left: 50%;
+    margin-left: -39vmin;
+
 }
 
 .cell{
     border-radius: 1vmin;
-    background-color: #c4b7b770;
+    background-color: #998f8f70;
 }
 
 .tile {
@@ -49,12 +52,14 @@ body {
     font-size: 7.5vmin;
     font-weight: bold;
 
-    color: hsl(20, 25%, var(--text-ligh));
-    background-color: hsl(330, 60%, var(--bg-ligh));
+    color: hsl(180, 0%, var(--text-ligh));
+    background-color: hsl(345, 60%, var(--bg-ligh));
 
     transition: 200ms;
     animation: show 200ms;
 }
+
+
 
 @keyframes show {
     0% {
@@ -69,6 +74,8 @@ body {
 
     text-align: center;
 
+    position: relative;
+
     width: 18vmin;
     height: 10vmin;
     border-radius: 1vmin;
@@ -77,16 +84,36 @@ body {
     font-size: 3.5vmin;
     font-weight: bold;
 
-    color: white;
-    background-color: hsl(330, 60%, 46%);
+
+    color: hsl(180, 0%, 20%);;
+    background-color: hsl(345, 60%, 73%);
     cursor: pointer;
-    padding: 6px 0px 10px;
+    padding: 2.5vmin 0px 2.5px;
+
+    transition: 0.4s;
 }
 
+.buttom:hover {
+    color: hsl(180, 0%, 80%);;
+    background-color: hsl(345, 60%, 46%);
+}
+
+
 .topnav {
-    padding: 0px 20px 40px;
+    padding: 40px 6vmin 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.content{
+    background-image: url(./pic/fon.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 90vmin;
+    left: 50%;
+    position: absolute;
+    margin-left: -45vmin;
 
 }

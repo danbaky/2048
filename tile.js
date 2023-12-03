@@ -18,7 +18,7 @@ export class Tile {
         this.tileElem.textContent = value;
         const bgLigh = 100 - Math.log2(value)*9;
         this.tileElem.style.setProperty("--bg-ligh", `${bgLigh}%`);
-        this.tileElem.style.setProperty("--text-ligh", `${bgLigh < 50 ? 90: 10}%`);
+        this.tileElem.style.setProperty("--text-ligh", `${bgLigh < 50 ? 80: 20}%`);
     }
 
     removeFromDOM() {
